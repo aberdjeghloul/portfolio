@@ -1,0 +1,74 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from '../../components/Footer.astro';
+import Header from '../../components/Header.astro';
+import { t } from '../../i18n/translations';
+
+const lang = 'en';
+const tr = t(lang);
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <BaseHead title={`${tr.about.title} — Abdelrhamane Berdjeghloul`} description="DevOps & Cloud Engineer" />
+    <style>
+      .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem; }
+      h1 { margin-bottom: 0.25rem; }
+      .subtitle { color: rgb(var(--gray)); margin: 0 0 2rem; font-size: 1.1rem; }
+      h2 { border-bottom: 2px solid rgb(var(--accent)); padding-bottom: 0.5rem; margin-bottom: 1rem; }
+      .skill-group { margin-bottom: 1.5rem; }
+      .skill-group h3 { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.05em; color: rgb(var(--gray)); margin: 0 0 0.5rem; }
+      .tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+      .tag { background: rgb(var(--gray-light)); color: rgb(var(--gray-dark)); padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.85rem; }
+      .contact-links { display: flex; flex-direction: column; gap: 0.75rem; }
+      .contact-links a { color: rgb(var(--accent)); text-decoration: none; font-weight: 600; }
+      .contact-links a:hover { text-decoration: underline; }
+      @media (max-width: 720px) { .about-grid { grid-template-columns: 1fr; } }
+    </style>
+  </head>
+  <body>
+    <Header lang={lang} />
+    <main>
+      <h1>Abdelrhamane Berdjeghloul</h1>
+      <p class="subtitle">{tr.about.subtitle}</p>
+      <p>{tr.about.bio1}</p>
+      <p>{tr.about.bio2}</p>
+      <div class="about-grid">
+        <section>
+          <h2>{tr.about.skills}</h2>
+          <div class="skill-group">
+            <h3>{tr.about.groups.cloud}</h3>
+            <div class="tags"><span class="tag">AWS</span><span class="tag">Terraform</span><span class="tag">Ansible</span></div>
+          </div>
+          <div class="skill-group">
+            <h3>{tr.about.groups.containers}</h3>
+            <div class="tags"><span class="tag">Docker</span><span class="tag">Docker Swarm</span><span class="tag">Kubernetes</span><span class="tag">Helm</span></div>
+          </div>
+          <div class="skill-group">
+            <h3>{tr.about.groups.cicd}</h3>
+            <div class="tags"><span class="tag">GitLab CI/CD</span><span class="tag">GitHub Actions</span><span class="tag">SonarCloud</span><span class="tag">Trivy</span><span class="tag">Hadolint</span></div>
+          </div>
+          <div class="skill-group">
+            <h3>{tr.about.groups.monitoring}</h3>
+            <div class="tags"><span class="tag">Prometheus</span><span class="tag">Grafana</span><span class="tag">Node Exporter</span><span class="tag">cAdvisor</span></div>
+          </div>
+          <div class="skill-group">
+            <h3>{tr.about.groups.dev}</h3>
+            <div class="tags"><span class="tag">C#</span><span class="tag">.NET</span><span class="tag">Python</span><span class="tag">Bash</span><span class="tag">SQL</span></div>
+          </div>
+        </section>
+        <section>
+          <h2>{tr.about.contact}</h2>
+          <div class="contact-links">
+            <a href="mailto:aberdjeghloul@gmail.com">aberdjeghloul@gmail.com</a>
+            <a href="https://github.com/aberdjeghloul" target="_blank">github.com/aberdjeghloul</a>
+            <a href="https://gitlab.com/abdelrhamane-devops" target="_blank">gitlab.com/abdelrhamane-devops</a>
+            <a href="https://linkedin.com/in/abdelrhamane-berdjeghloul-66a84a53" target="_blank">LinkedIn</a>
+          </div>
+        </section>
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>

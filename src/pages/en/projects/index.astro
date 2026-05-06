@@ -1,0 +1,59 @@
+---
+import { getCollection } from 'astro:content';
+import BaseHead from '../../../components/BaseHead.astro';
+import Footer from '../../../components/Footer.astro';
+import Header from '../../../components/Header.astro';
+import { t } from '../../../i18n/translations';
+
+const lang = 'en';
+const tr = t(lang);
+const projects = (await getCollection('projects')).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <BaseHead title={`${tr.projects.title} — Abdelrhamane Berdjeghloul`} description="DevOps & Cloud Engineering projects" />
+    <style>
+      h1 { margin-bottom: 2rem; }
+      .projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; list-style: none; padding: 0; margin: 0; }
+      .project-card { border: 1px solid rgb(var(--gray-light)); border-radius: 12px; padding: 1.5rem; transition: box-shadow 0.2s ease, border-color 0.2s ease; }
+      .project-card:hover { box-shadow: var(--box-shadow); border-color: rgb(var(--accent)); }
+      .project-card h2 { margin: 0 0 0.5rem; font-size: 1.1rem; border: none; padding: 0; }
+      .project-card h2 a { color: rgb(var(--black)); text-decoration: none; }
+      .project-card h2 a:hover { color: rgb(var(--accent)); }
+      .project-card p { color: rgb(var(--gray)); font-size: 0.9rem; margin: 0 0 1rem; line-height: 1.5; }
+      .stack { display: flex; flex-wrap: wrap; gap: 0.35rem; margin-bottom: 1rem; }
+      .tag { background: rgb(var(--gray-light)); color: rgb(var(--gray-dark)); padding: 0.2rem 0.6rem; border-radius: 20px; font-size: 0.75rem; }
+      .project-links { display: flex; gap: 0.75rem; }
+      .project-links a { font-size: 0.85rem; color: rgb(var(--accent)); text-decoration: none; font-weight: 600; }
+      .project-links a:hover { text-decoration: underline; }
+    </style>
+  </head>
+  <body>
+    <Header lang={lang} />
+    <main>
+      <h1>{tr.projects.title}</h1>
+      <ul class="projects-grid">
+        {projects.map((project) => (
+          <li class="project-card">
+            <h2><a href={`/${lang}/projects/${project.id}/`}>{project.data.title}</a></h2>
+            <p>{project.data.description}</p>
+            <div class="stack">
+              {project.data.stack.map((tech) => <span class="tag">{tech}</span>)}
+            </div>
+            <div class="project-links">
+              {project.data.live && <a href={project.data.live} target="_blank">{tr.projects.live} ↗</a>}
+              {project.data.github && <a href={project.data.github} target="_blank">GitHub ↗</a>}
+              {project.data.gitlab && <a href={project.data.gitlab} target="_blank">GitLab ↗</a>}
+              <a href={`/${lang}/projects/${project.id}/`}>{tr.projects.details}</a>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </main>
+    <Footer />
+  </body>
+</html>
