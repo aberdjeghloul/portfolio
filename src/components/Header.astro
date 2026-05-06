@@ -25,7 +25,9 @@ const otherPath = lang === 'en'
       <HeaderLink href={`/${lang}/about/`}>{tr.nav.about}</HeaderLink>
     </div>
     <div class="right">
-      <a class="lang-switch" href={otherPath}>{otherLang.toUpperCase()}</a>
+      <button class="lang-switch" onclick={`window.location='${otherPath}'`} title={otherLang === 'fr' ? 'Français' : 'English'}>
+        <img src={`https://flagcdn.com/24x18/${otherLang === 'fr' ? 'fr' : 'gb'}.png`} width="24" height="18" alt={otherLang === 'fr' ? 'Français' : 'English'} />
+      </button>
       <div class="social-links">
         <a href="https://github.com/aberdjeghloul" target="_blank">
           <span class="sr-only">GitHub</span>
@@ -79,19 +81,19 @@ const otherPath = lang === 'en'
     align-items: center;
     gap: 0.5rem;
   }
-  .lang-switch {
-    font-size: 0.8rem;
-    font-weight: 700;
-    padding: 0.3rem 0.6rem;
-    border: 2px solid rgb(var(--accent));
-    border-radius: 4px;
-    color: rgb(var(--accent)) !important;
-    border-bottom: 2px solid rgb(var(--accent)) !important;
+  button.lang-switch {
+    font-size: 1.4rem;
+    padding: 0;
+    border: none;
+    background: transparent;
+    cursor: pointer;
     line-height: 1;
+    opacity: 0.8;
+    transition: opacity 0.15s, transform 0.15s;
   }
-  .lang-switch:hover {
-    background: rgb(var(--accent));
-    color: white !important;
+  button.lang-switch:hover {
+    opacity: 1;
+    transform: scale(1.15);
   }
   .social-links { display: flex; align-items: center; gap: 0.25rem; }
   @media (max-width: 720px) {
