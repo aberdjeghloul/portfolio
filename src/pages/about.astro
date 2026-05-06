@@ -1,63 +1,152 @@
 ---
-import AboutHeroImage from '../assets/blog-placeholder-about.jpg';
-import Layout from '../layouts/BlogPost.astro';
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
 ---
 
-<Layout
-	title="About Me"
-	description="Lorem ipsum dolor sit amet"
-	pubDate={new Date('August 08 2021')}
-	heroImage={AboutHeroImage}
->
-	<p>
-		Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-		labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo
-		viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam
-		adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus
-		et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus
-		vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque
-		sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
-	</p>
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title="About — Abdelrhamane Berdjeghloul" description="DevOps & Cloud Engineer" />
+		<style>
+			.about-grid {
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 2rem;
+				margin-bottom: 2rem;
+			}
+			h1 { margin-bottom: 0.25rem; }
+			.subtitle {
+				color: rgb(var(--gray));
+				margin: 0 0 2rem;
+				font-size: 1.1rem;
+			}
+			h2 {
+				border-bottom: 2px solid rgb(var(--accent));
+				padding-bottom: 0.5rem;
+				margin-bottom: 1rem;
+			}
+			.skill-group {
+				margin-bottom: 1.5rem;
+			}
+			.skill-group h3 {
+				font-size: 0.9rem;
+				text-transform: uppercase;
+				letter-spacing: 0.05em;
+				color: rgb(var(--gray));
+				margin: 0 0 0.5rem;
+			}
+			.tags {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.5rem;
+			}
+			.tag {
+				background: rgb(var(--gray-light));
+				color: rgb(var(--gray-dark));
+				padding: 0.25rem 0.75rem;
+				border-radius: 20px;
+				font-size: 0.85rem;
+			}
+			.contact-links {
+				display: flex;
+				flex-direction: column;
+				gap: 0.75rem;
+			}
+			.contact-links a {
+				color: rgb(var(--accent));
+				text-decoration: none;
+				font-weight: 600;
+			}
+			.contact-links a:hover { text-decoration: underline; }
+			@media (max-width: 720px) {
+				.about-grid { grid-template-columns: 1fr; }
+			}
+		</style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>Abdelrhamane Berdjeghloul</h1>
+			<p class="subtitle">DevOps & Cloud Engineer · Senior .NET Developer · 20+ years experience</p>
 
-	<p>
-		Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non
-		tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non
-		blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna
-		porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis
-		massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc.
-		Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis
-		bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra
-		massa massa ultricies mi.
-	</p>
+			<p>
+				Senior software developer with 20+ years of experience in .NET development, now specialised in
+				DevOps and cloud engineering. Passionate about infrastructure automation, CI/CD pipelines, and
+				building resilient cloud architectures.
+			</p>
+			<p>
+				Currently completing a DevOps bootcamp, working on production-grade deployments on AWS
+				with Terraform, Ansible, Docker Swarm, and GitLab CI/CD.
+			</p>
 
-	<p>
-		Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl
-		suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet
-		nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae
-		turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem
-		dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat
-		semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus
-		vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum
-		facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam
-		vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla
-		urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
-	</p>
+			<div class="about-grid">
+				<section>
+					<h2>Skills</h2>
 
-	<p>
-		Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper
-		viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc
-		scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur
-		gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus
-		pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim
-		blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id
-		cursus metus aliquam eleifend mi.
-	</p>
+					<div class="skill-group">
+						<h3>Cloud & IaC</h3>
+						<div class="tags">
+							<span class="tag">AWS</span>
+							<span class="tag">Terraform</span>
+							<span class="tag">Ansible</span>
+						</div>
+					</div>
 
-	<p>
-		Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta
-		nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam
-		tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci
-		ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar
-		proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
-	</p>
-</Layout>
+					<div class="skill-group">
+						<h3>Containers & Orchestration</h3>
+						<div class="tags">
+							<span class="tag">Docker</span>
+							<span class="tag">Docker Swarm</span>
+							<span class="tag">Kubernetes</span>
+							<span class="tag">Helm</span>
+						</div>
+					</div>
+
+					<div class="skill-group">
+						<h3>CI/CD & Quality</h3>
+						<div class="tags">
+							<span class="tag">GitLab CI/CD</span>
+							<span class="tag">GitHub Actions</span>
+							<span class="tag">SonarCloud</span>
+							<span class="tag">Trivy</span>
+							<span class="tag">Hadolint</span>
+						</div>
+					</div>
+
+					<div class="skill-group">
+						<h3>Monitoring</h3>
+						<div class="tags">
+							<span class="tag">Prometheus</span>
+							<span class="tag">Grafana</span>
+							<span class="tag">Node Exporter</span>
+							<span class="tag">cAdvisor</span>
+						</div>
+					</div>
+
+					<div class="skill-group">
+						<h3>Development</h3>
+						<div class="tags">
+							<span class="tag">C#</span>
+							<span class="tag">.NET</span>
+							<span class="tag">Python</span>
+							<span class="tag">Bash</span>
+							<span class="tag">SQL</span>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<h2>Contact</h2>
+					<div class="contact-links">
+						<a href="mailto:aberdjeghloul@gmail.com">aberdjeghloul@gmail.com</a>
+						<a href="https://github.com/aberdjeghloul" target="_blank">github.com/aberdjeghloul</a>
+						<a href="https://gitlab.com/abdelrhamane-devops" target="_blank">gitlab.com/abdelrhamane-devops</a>
+						<a href="https://linkedin.com/in/abdelrhamane-berdjeghloul-66a84a53" target="_blank">LinkedIn</a>
+					</div>
+				</section>
+			</div>
+		</main>
+		<Footer />
+	</body>
+</html>
