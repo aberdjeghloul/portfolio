@@ -21,7 +21,7 @@ Automated deployment of [Taiga](https://taiga.io) on AWS with high availability 
 - **NLB** for cross-zone load balancing
 - **S3** for automated daily backups
 
-## CI/CD Pipeline
+## CI/CD Pipeline [![pipeline status](https://gitlab.com/abdelrhamane-devops/taiga-project/infra-projet/badges/main/pipeline.svg)](https://gitlab.com/abdelrhamane-devops/taiga-project/infra-projet/-/pipelines)
 
 ```
 dev → main       →  Integration tests (pytest) + SonarCloud analysis
