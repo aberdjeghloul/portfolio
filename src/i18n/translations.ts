@@ -9,7 +9,7 @@ export const translations = {
       about: 'About',
     },
     hero: {
-      subtitle: 'DevOps & Cloud Engineer · Senior .NET Developer · 20+ years experience',
+      subtitle: 'Senior .NET Developer · Titre Pro Administrateur Système DevOps (RNCP 6)',
       aboutMe: 'About me',
     },
     projects: {
@@ -25,9 +25,9 @@ export const translations = {
     },
     about: {
       title: 'About',
-      subtitle: 'DevOps & Cloud Engineer · Senior .NET Developer · 20+ years experience',
-      bio1: 'Senior software developer with 20+ years of experience in .NET development, now specialised in DevOps and cloud engineering. Passionate about infrastructure automation, CI/CD pipelines, and building resilient cloud architectures.',
-      bio2: 'Currently completing a DevOps bootcamp, working on production-grade deployments on AWS with Terraform, Ansible, Docker Swarm, and GitLab CI/CD.',
+      subtitle: 'Senior .NET Developer · Titre Professionnel Administrateur Système DevOps (RNCP 6)',
+      bio1: 'Senior .NET developer with 20+ years of experience, holding the Titre Professionnel Administrateur Système DevOps (RNCP level 6 — La Capsule, 2026). A dual expertise that covers the full application lifecycle: from code to infrastructure.',
+      bio2: 'DevOps is not a career change — it\'s a complement. Combining deep .NET development skills with cloud infrastructure, CI/CD automation, and production operations on AWS.',
       skills: 'Skills',
       contact: 'Contact',
       groups: {
@@ -47,7 +47,7 @@ export const translations = {
       about: 'À propos',
     },
     hero: {
-      subtitle: 'Ingénieur DevOps & Cloud · Développeur .NET Senior · 20+ ans d\'expérience',
+      subtitle: 'Développeur .NET Senior · Titre Pro Administrateur Système DevOps (RNCP 6)',
       aboutMe: 'À propos',
     },
     projects: {
@@ -63,9 +63,9 @@ export const translations = {
     },
     about: {
       title: 'À propos',
-      subtitle: 'Ingénieur DevOps & Cloud · Développeur .NET Senior · 20+ ans d\'expérience',
-      bio1: 'Développeur senior avec 20+ ans d\'expérience en développement .NET, spécialisé en ingénierie DevOps et cloud. Passionné par l\'automatisation d\'infrastructure, les pipelines CI/CD et la conception d\'architectures cloud résilientes.',
-      bio2: 'En cours de formation DevOps intensive, avec des déploiements en production sur AWS avec Terraform, Ansible, Docker Swarm et GitLab CI/CD.',
+      subtitle: 'Développeur .NET Senior · Titre Professionnel Administrateur Système DevOps (RNCP 6)',
+      bio1: 'Développeur senior .NET avec 20+ ans d\'expérience, titulaire du Titre Professionnel Administrateur Système DevOps (RNCP niveau 6 — La Capsule, 2026). Une double compétence qui couvre l\'intégralité du cycle de vie d\'une application : du code à l\'infrastructure.',
+      bio2: 'Le DevOps n\'est pas une reconversion — c\'est un complément. Maîtrise du développement .NET combinée à l\'infrastructure cloud, l\'automatisation CI/CD et l\'exploitation en production sur AWS.',
       skills: 'Compétences',
       contact: 'Contact',
       groups: {

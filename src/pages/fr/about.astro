@@ -24,6 +24,14 @@ const tr = t(lang);
       .contact-links { display: flex; flex-direction: column; gap: 0.75rem; }
       .contact-links a { color: rgb(var(--accent)); text-decoration: none; font-weight: 600; }
       .contact-links a:hover { text-decoration: underline; }
+      .cv-btn { display: inline-block; margin-top: 0.5rem; background: rgb(var(--accent)); color: white !important; padding: 0.5rem 1.25rem; border-radius: 8px; font-weight: 700; transition: opacity 0.2s; }
+      .cv-btn:hover { opacity: 0.85; text-decoration: none !important; }
+      .parcours { margin-bottom: 2rem; }
+      .timeline { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.75rem; }
+      .timeline li { display: flex; gap: 1.25rem; align-items: baseline; }
+      .timeline .year { font-weight: 700; color: rgb(var(--accent)); min-width: 4.5rem; font-size: 0.9rem; }
+      .timeline .desc { color: rgb(var(--gray-dark)); font-size: 0.95rem; line-height: 1.4; }
+      .diploma { display: inline-block; margin-top: 0.25rem; background: rgb(var(--accent)); color: white; padding: 0.15rem 0.6rem; border-radius: 20px; font-size: 0.78rem; font-weight: 600; }
       @media (max-width: 720px) { .about-grid { grid-template-columns: 1fr; } }
     </style>
   </head>
@@ -34,6 +42,42 @@ const tr = t(lang);
       <p class="subtitle">{tr.about.subtitle}</p>
       <p>{tr.about.bio1}</p>
       <p>{tr.about.bio2}</p>
+      <div class="parcours">
+        <h2>Parcours</h2>
+        <ul class="timeline">
+          <li>
+            <span class="year">2003 – 2010</span>
+            <span class="desc">Consultant .NET — LOGICA/CGI · Missions grands comptes : Canal+, L'Oréal, Monoprix, Johnson &amp; Johnson, Syngenta (ASP.NET, C#, SharePoint)</span>
+          </li>
+          <li>
+            <span class="year">2010 – 2016</span>
+            <span class="desc">Chef de Projet MOE — vente-privee.com · SI Transport : 13 entrepôts, 18 transporteurs, 50 000 colis/jour</span>
+          </li>
+          <li>
+            <span class="year">2016 – 2020</span>
+            <span class="desc">Ingénieur Études &amp; Développement — ALTIMATE · Missions : BPCE (datawarehouse marché), KANTAR WORLDPANEL, HOMEBOX</span>
+          </li>
+          <li>
+            <span class="year">2020 – 2022</span>
+            <span class="desc">Développeur Backend — QOBUZ · Automatisation reporting financier (.NET C#, REST API)</span>
+          </li>
+          <li>
+            <span class="year">2022 – 2025</span>
+            <span class="desc">Consultant Développeur .NET Senior — INGENIANCE · Client : BNP Personal Finance · Lutte contre la fraude (.NET 8.0, Jenkins, Splunk, Dynatrace)</span>
+          </li>
+          <li>
+            <span class="year">Jan – Mar 2026</span>
+            <span class="desc">
+              Formation intensive DevOps — La Capsule, Paris (400h)<br />
+              <span class="diploma">Titre Pro Administrateur Système DevOps · RNCP Niveau 6</span>
+            </span>
+          </li>
+          <li>
+            <span class="year">2026</span>
+            <span class="desc">Déploiement Taiga en production sur AWS — Docker Swarm Multi-AZ, Terraform, Ansible, GitLab CI/CD, Prometheus/Grafana</span>
+          </li>
+        </ul>
+      </div>
       <div class="about-grid">
         <section>
           <h2>{tr.about.skills}</h2>
@@ -59,12 +103,22 @@ const tr = t(lang);
           </div>
         </section>
         <section>
+          <h2>Certifications</h2>
+          <div class="skill-group">
+            <div class="tags">
+              <span class="tag">Titre Pro DevOps RNCP 6 — La Capsule (2026)</span>
+              <span class="tag">PSM I — Professional Scrum Master (2015)</span>
+              <span class="tag">PRINCE2 Foundation &amp; Practitioner (2015)</span>
+            </div>
+          </div>
           <h2>{tr.about.contact}</h2>
           <div class="contact-links">
             <a href="mailto:aberdjeghloul@gmail.com">aberdjeghloul@gmail.com</a>
             <a href="https://github.com/aberdjeghloul" target="_blank">github.com/aberdjeghloul</a>
             <a href="https://gitlab.com/abdelrhamane-devops" target="_blank">gitlab.com/abdelrhamane-devops</a>
             <a href="https://linkedin.com/in/abdelrhamane-berdjeghloul-66a84a53" target="_blank">LinkedIn</a>
+            <a href="https://aberdjeghloul.github.io/cv" target="_blank" class="cv-btn">CV en ligne</a>
+            <a href="GDRIVE_URL" target="_blank" class="cv-btn" style="background: rgb(var(--gray-dark))">Télécharger le CV (PDF)</a>
           </div>
         </section>
       </div>
