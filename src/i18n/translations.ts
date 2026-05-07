@@ -5,6 +5,7 @@ export const translations = {
     nav: {
       home: 'Home',
       projects: 'Projects',
+      blog: 'Blog',
       about: 'About',
     },
     hero: {
@@ -16,6 +17,11 @@ export const translations = {
       live: 'Live',
       details: 'Details →',
       back: '← All projects',
+    },
+    blog: {
+      title: 'Blog',
+      back: '← All articles',
+      readMore: 'Read →',
     },
     about: {
       title: 'About',
@@ -37,6 +43,7 @@ export const translations = {
     nav: {
       home: 'Accueil',
       projects: 'Projets',
+      blog: 'Blog',
       about: 'À propos',
     },
     hero: {
@@ -48,6 +55,11 @@ export const translations = {
       live: 'Live',
       details: 'Détails →',
       back: '← Tous les projets',
+    },
+    blog: {
+      title: 'Blog',
+      back: '← Tous les articles',
+      readMore: 'Lire →',
     },
     about: {
       title: 'À propos',
