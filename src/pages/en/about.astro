@@ -2,6 +2,8 @@
 import BaseHead from '../../components/BaseHead.astro';
 import Footer from '../../components/Footer.astro';
 import Header from '../../components/Header.astro';
+import Certifications from '../../components/Certifications.astro';
+import { CV_PDF } from '../../consts';
 import { t } from '../../i18n/translations';
 
 const lang = 'en';
@@ -11,7 +13,7 @@ const tr = t(lang);
 <!doctype html>
 <html lang={lang}>
   <head>
-    <BaseHead title={`${tr.about.title} — Abdelrhamane Berdjeghloul`} description="DevOps & Cloud Engineer" />
+    <BaseHead title={`${tr.about.title} — Abdelrhamane Berdjeghloul`} description="Senior .NET Developer | DevOps & AWS | Scrum Master — AWS Certified Solutions Architect – Associate" />
     <style>
       .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; margin-bottom: 2rem; }
       h1 { margin-bottom: 0.25rem; }
@@ -73,8 +75,15 @@ const tr = t(lang);
             </span>
           </li>
           <li>
-            <span class="year">2026</span>
-            <span class="desc">Taiga production deployment on AWS — Docker Swarm Multi-AZ, Terraform, Ansible, GitLab CI/CD, Prometheus/Grafana</span>
+            <span class="year">Jan – Mar 2026</span>
+            <span class="desc">Certification project: Taiga in production on AWS — team of 4 DevOps engineers, CI/CD specialist (3 GitLab CI/CD pipelines)</span>
+          </li>
+          <li>
+            <span class="year">Nov 2026</span>
+            <span class="desc">
+              AWS cloud certification<br />
+              <span class="diploma">AWS Certified Solutions Architect – Associate (SAA-C03)</span>
+            </span>
           </li>
         </ul>
       </div>
@@ -104,13 +113,7 @@ const tr = t(lang);
         </section>
         <section>
           <h2>Certifications</h2>
-          <div class="skill-group">
-            <div class="tags">
-              <span class="tag">Titre Pro DevOps RNCP 6 — La Capsule (2026)</span>
-              <span class="tag">PSM I — Professional Scrum Master (2015)</span>
-              <span class="tag">PRINCE2 Foundation &amp; Practitioner (2015)</span>
-            </div>
-          </div>
+          <Certifications lang={lang} />
           <h2>{tr.about.contact}</h2>
           <div class="contact-links">
             <a href="mailto:aberdjeghloul@gmail.com">aberdjeghloul@gmail.com</a>
@@ -118,7 +121,7 @@ const tr = t(lang);
             <a href="https://gitlab.com/abdelrhamane-devops" target="_blank">gitlab.com/abdelrhamane-devops</a>
             <a href="https://linkedin.com/in/abdelrhamane-berdjeghloul-66a84a53" target="_blank">LinkedIn</a>
             <a href="https://aberdjeghloul.github.io/cv" target="_blank" style="display:inline-block;margin-top:0.5rem;background:#4f46e5;color:white;padding:0.5rem 1.25rem;border-radius:8px;font-weight:700;text-decoration:none;">CV online</a>
-            <a href="https://drive.google.com/uc?export=download&id=1TsO9GsLPVBtNWFe213P8K89l3kBbW4H9" target="_blank" style="display:inline-block;margin-top:0.5rem;background:#374151;color:white;padding:0.5rem 1.25rem;border-radius:8px;font-weight:700;text-decoration:none;">Download CV (PDF)</a>
+            <a href={CV_PDF} target="_blank" rel="noopener" style="display:inline-block;margin-top:0.5rem;background:#374151;color:white;padding:0.5rem 1.25rem;border-radius:8px;font-weight:700;text-decoration:none;">Download CV (PDF)</a>
           </div>
         </section>
       </div>

@@ -25,6 +25,7 @@ const { Content } = await render(project);
   <head>
     <BaseHead title={`${project.data.title} — Abdelrhamane Berdjeghloul`} description={project.data.description} />
     <style>
+      .context { background: rgba(255, 153, 0, 0.08); border-left: 3px solid #ff9900; padding: 0.6rem 0.9rem; border-radius: 6px; color: rgb(var(--gray-dark)) !important; font-size: 0.88rem !important; line-height: 1.5; }
       .project-header { margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid rgb(var(--gray-light)); }
       h1 { margin-bottom: 0.5rem; }
       .description { color: rgb(var(--gray)); font-size: 1.1rem; margin: 0 0 1rem; }
@@ -45,6 +46,7 @@ const { Content } = await render(project);
       <div class="project-header">
         <h1>{project.data.title}</h1>
         <p class="description">{project.data.description}</p>
+        {project.data.context && <p class="context">{project.data.context[lang]}</p>}
         <div class="stack">
           {project.data.stack.map((tech) => <span class="tag">{tech}</span>)}
         </div>

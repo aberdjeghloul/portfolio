@@ -1,0 +1,55 @@
+---
+import fs from 'node:fs';
+import path from 'node:path';
+import { AWS_BADGE_IMAGE, CREDLY_BADGE_URL } from '../consts';
+import type { Lang } from '../i18n/translations';
+
+interface Props {
+  lang: Lang;
+}
+const { lang } = Astro.props;
+
+// Affiche l'image du badge uniquement si le fichier existe dans public/
+const hasBadgeImage = fs.existsSync(path.join(process.cwd(), 'public', AWS_BADGE_IMAGE));
+
+const L = {
+  fr: { date: 'Novembre 2026', verify: 'Vérifier sur Credly ↗', issuer: 'Amazon Web Services' },
+  en: { date: 'November 2026', verify: 'Verify on Credly ↗', issuer: 'Amazon Web Services' },
+}[lang];
+
+const others = [
+  lang === 'fr'
+    ? 'Titre Pro Administrateur Système DevOps — RNCP Niveau 6 (La Capsule, 2026)'
+    : 'Titre Pro Administrateur Système DevOps — RNCP Level 6 (La Capsule, 2026)',
+  'PSM I — Professional Scrum Master (Scrum.org, 2015)',
+  'PRINCE2 Foundation & Practitioner (2015)',
+];
+---
+
+<div class="cert-aws">
+  {hasBadgeImage ? (
+    <img src={AWS_BADGE_IMAGE} alt="AWS Certified Solutions Architect – Associate badge" width="72" height="72" />
+  ) : (
+    <span class="aws-mark" aria-hidden="true">AWS</span>
+  )}
+  <div>
+    <strong>AWS Certified Solutions Architect – Associate</strong>
+    <div class="meta">SAA-C03 · {L.issuer} · {L.date}</div>
+    {CREDLY_BADGE_URL && <a href={CREDLY_BADGE_URL} target="_blank" rel="noopener">{L.verify}</a>}
+  </div>
+</div>
+<ul class="cert-list">
+  {others.map((c) => <li>{c}</li>)}
+</ul>
+
+<style>
+  .cert-aws { display: flex; gap: 1rem; align-items: center; padding: 1rem; border: 1px solid rgb(var(--gray-light)); border-left: 4px solid #ff9900; border-radius: 10px; margin-bottom: 1rem; }
+  .cert-aws img { width: 72px; height: 72px; flex-shrink: 0; }
+  .aws-mark { flex-shrink: 0; width: 72px; height: 72px; display: grid; place-items: center; background: #232f3e; color: #ff9900; font-weight: 800; font-size: 1.2rem; border-radius: 10px; }
+  .cert-aws strong { display: block; line-height: 1.3; }
+  .meta { color: rgb(var(--gray)); font-size: 0.85rem; margin: 0.2rem 0; }
+  .cert-aws a { color: rgb(var(--accent)); font-weight: 600; font-size: 0.9rem; text-decoration: none; }
+  .cert-aws a:hover { text-decoration: underline; }
+  .cert-list { margin: 0 0 2rem; padding-left: 1.2rem; color: rgb(var(--gray-dark)); font-size: 0.95rem; }
+  .cert-list li { margin-bottom: 0.4rem; }
+</style>

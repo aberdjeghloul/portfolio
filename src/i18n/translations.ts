@@ -9,7 +9,9 @@ export const translations = {
       about: 'About',
     },
     hero: {
-      subtitle: 'Senior .NET Developer · Titre Pro Administrateur Système DevOps (RNCP 6)',
+      subtitle: 'Senior .NET Developer | DevOps & AWS | Scrum Master',
+      available: 'Available',
+      availableDetail: 'permanent or contract',
       aboutMe: 'About me',
     },
     projects: {
@@ -25,9 +27,9 @@ export const translations = {
     },
     about: {
       title: 'About',
-      subtitle: 'Senior .NET Developer · Titre Professionnel Administrateur Système DevOps (RNCP 6)',
-      bio1: 'Senior .NET developer with 20+ years of experience, holding the Titre Professionnel Administrateur Système DevOps (RNCP level 6 — La Capsule, 2026). A dual expertise that covers the full application lifecycle: from code to infrastructure.',
-      bio2: 'DevOps is not a career change — it\'s a complement. Combining deep .NET development skills with cloud infrastructure, CI/CD automation, and production operations on AWS.',
+      subtitle: 'Senior .NET Developer | DevOps & AWS | Scrum Master',
+      bio1: '22 years of experience in back-end .NET/C# development and agile project delivery, complemented by the Titre Professionnel Administrateur Système DevOps (RNCP level 6 — La Capsule, 2026) and the AWS Certified Solutions Architect – Associate certification (SAA-C03, November 2026).',
+      bio2: 'A dual Dev & Ops culture that covers the full software lifecycle: from code to cloud infrastructure on AWS, CI/CD automation and production monitoring. DevOps is not a career change — it\'s a complement.',
       skills: 'Skills',
       contact: 'Contact',
       groups: {
@@ -47,7 +49,9 @@ export const translations = {
       about: 'À propos',
     },
     hero: {
-      subtitle: 'Développeur .NET Senior · Titre Pro Administrateur Système DevOps (RNCP 6)',
+      subtitle: 'Développeur .NET Senior | DevOps & AWS | Scrum Master',
+      available: 'Disponible',
+      availableDetail: 'CDI ou mission',
       aboutMe: 'À propos',
     },
     projects: {
@@ -63,9 +67,9 @@ export const translations = {
     },
     about: {
       title: 'À propos',
-      subtitle: 'Développeur .NET Senior · Titre Professionnel Administrateur Système DevOps (RNCP 6)',
-      bio1: 'Développeur senior .NET avec 20+ ans d\'expérience, titulaire du Titre Professionnel Administrateur Système DevOps (RNCP niveau 6 — La Capsule, 2026). Une double compétence qui couvre l\'intégralité du cycle de vie d\'une application : du code à l\'infrastructure.',
-      bio2: 'Le DevOps n\'est pas une reconversion — c\'est un complément. Maîtrise du développement .NET combinée à l\'infrastructure cloud, l\'automatisation CI/CD et l\'exploitation en production sur AWS.',
+      subtitle: 'Développeur .NET Senior | DevOps & AWS | Scrum Master',
+      bio1: '22 ans d\'expérience en développement back-end .NET/C# et en pilotage de projets agiles, complétés par le Titre Professionnel Administrateur Système DevOps (RNCP niveau 6 — La Capsule, 2026) et la certification AWS Certified Solutions Architect – Associate (SAA-C03, novembre 2026).',
+      bio2: 'Une double culture Dev & Ops qui couvre l\'intégralité du cycle logiciel : du code à l\'infrastructure cloud AWS, en passant par l\'automatisation CI/CD et la supervision en production. Le DevOps n\'est pas une reconversion — c\'est un complément.',
       skills: 'Compétences',
       contact: 'Contact',
       groups: {

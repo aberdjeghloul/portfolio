@@ -12,6 +12,7 @@ const projects = defineCollection({
 		github: z.string().optional(),
 		gitlab: z.string().optional(),
 		live: z.string().optional(),
+		context: z.object({ fr: z.string(), en: z.string() }).optional(),
 	}),
 });
 

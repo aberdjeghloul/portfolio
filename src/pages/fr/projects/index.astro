@@ -17,6 +17,7 @@ const projects = (await getCollection('projects')).sort(
   <head>
     <BaseHead title={`${tr.projects.title} — Abdelrhamane Berdjeghloul`} description="Projets DevOps & Cloud Engineering" />
     <style>
+      .context { background: rgba(255, 153, 0, 0.08); border-left: 3px solid #ff9900; padding: 0.6rem 0.9rem; border-radius: 6px; color: rgb(var(--gray-dark)) !important; font-size: 0.88rem !important; line-height: 1.5; }
       h1 { margin-bottom: 2rem; }
       .projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1.5rem; list-style: none; padding: 0; margin: 0; }
       .project-card { border: 1px solid rgb(var(--gray-light)); border-radius: 12px; padding: 1.5rem; transition: box-shadow 0.2s ease, border-color 0.2s ease; }
@@ -41,6 +42,7 @@ const projects = (await getCollection('projects')).sort(
           <li class="project-card">
             <h2><a href={`/${lang}/projects/${project.id}/`}>{project.data.title}</a></h2>
             <p>{project.data.description}</p>
+            {project.data.context && <p class="context">{project.data.context[lang]}</p>}
             <div class="stack">
               {project.data.stack.map((tech) => <span class="tag">{tech}</span>)}
             </div>

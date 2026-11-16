@@ -16,11 +16,14 @@ const projects = (await getCollection('projects')).sort(
 <!doctype html>
 <html lang={lang}>
   <head>
-    <BaseHead title="Abdelrhamane Berdjeghloul" description="Ingénieur DevOps & Cloud — AWS, Terraform, Docker, GitLab CI/CD" />
+    <BaseHead title="Abdelrhamane Berdjeghloul" description="Développeur .NET Senior | DevOps & AWS | Scrum Master — AWS Certified Solutions Architect – Associate" />
     <style>
+      .context { background: rgba(255, 153, 0, 0.08); border-left: 3px solid #ff9900; padding: 0.6rem 0.9rem; border-radius: 6px; color: rgb(var(--gray-dark)) !important; font-size: 0.88rem !important; line-height: 1.5; }
       .hero { padding: 3rem 0 2rem; border-bottom: 1px solid rgb(var(--gray-light)); margin-bottom: 2rem; }
       .hero h1 { margin: 0 0 0.5rem; font-size: 2.5rem; }
-      .hero .subtitle { font-size: 1.1rem; color: rgb(var(--gray)); margin: 0 0 1.5rem; }
+      .hero .subtitle { font-size: 1.1rem; color: rgb(var(--gray)); margin: 0 0 1rem; }
+      .available { display: inline-flex; align-items: center; gap: 0.5rem; margin: 0 0 1.5rem; padding: 0.3rem 0.9rem; border-radius: 20px; background: #dcfce7; color: #166534; font-size: 0.9rem; font-weight: 600; }
+      .available .dot { width: 0.55rem; height: 0.55rem; border-radius: 50%; background: #16a34a; }
       .stack-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem; }
       .tag { background: rgb(var(--gray-light)); color: rgb(var(--gray-dark)); padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.85rem; }
       .links { display: flex; gap: 1rem; }
@@ -51,6 +54,7 @@ const projects = (await getCollection('projects')).sort(
       <section class="hero">
         <h1>Abdelrhamane Berdjeghloul</h1>
         <p class="subtitle">{tr.hero.subtitle}</p>
+        <p class="available"><span class="dot" aria-hidden="true"></span>{tr.hero.available} · {tr.hero.availableDetail}</p>
         <div class="stack-tags">
           <span class="tag">AWS</span><span class="tag">Terraform</span><span class="tag">Ansible</span>
           <span class="tag">Docker Swarm</span><span class="tag">Kubernetes</span><span class="tag">GitLab CI/CD</span>
@@ -70,6 +74,7 @@ const projects = (await getCollection('projects')).sort(
             <li class="project-card">
               <h3><a href={`/${lang}/projects/${project.id}/`}>{project.data.title}</a></h3>
               <p>{project.data.description}</p>
+              {project.data.context && <p class="context">{project.data.context[lang]}</p>}
               <div class="project-stack">
                 {project.data.stack.map((tech) => <span class="tag">{tech}</span>)}
               </div>
