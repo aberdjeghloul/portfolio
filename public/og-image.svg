@@ -30,8 +30,8 @@
   <rect x="80" y="340" width="120" height="4" fill="#6366f1" rx="2"/>
 
   <!-- Title -->
-  <text x="80" y="400" font-family="'Segoe UI', Arial, sans-serif" font-size="32" fill="#a5b4fc">Développeur .NET Senior</text>
-  <text x="80" y="445" font-family="'Segoe UI', Arial, sans-serif" font-size="32" fill="#a5b4fc">Administrateur Système DevOps — RNCP Niveau 6</text>
+  <text x="80" y="400" font-family="'Segoe UI', Arial, sans-serif" font-size="32" fill="#a5b4fc">Développeur .NET Senior | DevOps &amp; AWS | Scrum Master</text>
+  <text x="80" y="445" font-family="'Segoe UI', Arial, sans-serif" font-size="32" font-weight="600" fill="#ff9900">AWS Certified Solutions Architect – Associate</text>
 
   <!-- Tags -->
   <rect x="80" y="490" width="90" height="36" rx="18" fill="#6366f1" opacity="0.4"/>
